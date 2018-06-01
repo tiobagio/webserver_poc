@@ -11,6 +11,12 @@ driver:
     Name: "Chef Training Node for <YOURNAME>, Rees"
     created-by: "test-kitchen"
     user: Administrator
+    X-Contact: <%= ENV['USER'] %>
+    X-Application: <%= ENV['X_APPLICATION'] %>
+    X-Dept: <%= ENV['X_DEPT'] %>
+    X-Customer: "Test-Kitchen"
+    X-Project: "Test-Kitchen"
+    X-TTL: 4
 
 provisioner:
   name: chef_zero
