@@ -9,13 +9,13 @@ driver:
   tags:
     # Replace YOURNAME and YOURCOMPANY here
     Name: "Chef Training Node for <YOURNAME>, Rees"
-    created-by: "test-kitchen"
     user: Administrator
     X-Contact: "Anthony Rees"
-    X-Application: "Training"
-    X-Dept: "Solutions Architects"
-    X-Customer: "Test-Kitchen"
-    X-Project: "Test-Kitchen"
+    X-Application: "apac"
+    X-Dept: "sales"
+    X-Customer: "Rees"
+    X-Project: "BJC-Demo"
+    X-Termination-Date: "2018-07-20T12:04:30Z"
     X-TTL: 4
 
 provisioner:
