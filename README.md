@@ -1,4 +1,5 @@
 # webserver
 
-TODO: Enter the cookbook description here.
+## Test 'httpd' webserver
+This cookbook is used for training.
 
