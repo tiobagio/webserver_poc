@@ -4,6 +4,7 @@ driver:
   aws_ssh_key_id: chef_demo_2x
   region: us-west-2
   security_group_ids: sg-2560a741
+  subnet_id: subnet-3498432874387493284
   associate_public_ip: true
   instance_type: t2.micro
   tags:
