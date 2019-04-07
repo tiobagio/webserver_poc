@@ -9,12 +9,12 @@ driver:
   instance_type: t2.micro
   tags:
     # Replace YOURNAME and YOURCOMPANY here
-    Name: "Chef Training Node for <YOURNAME>, Rees"
+    Name: "Chef tbagio Training Node for <YOURNAME>"
     user: Administrator
-    X-Contact: "Anthony Rees"
+    X-Contact: "Tio Bagio"
     X-Application: "apac"
     X-Dept: "sales"
-    X-Customer: "Rees"
+    X-Customer: "apjcorp"
     X-Project: "BJC-Demo"
     X-Termination-Date: "2018-07-20T12:04:30Z"
     X-TTL: 4
