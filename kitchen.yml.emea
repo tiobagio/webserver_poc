@@ -1,0 +1,44 @@
+---
+driver:
+  name: ec2
+  aws_ssh_key_id: bagio-ireleand
+  region: eu-west-1
+  security_group_ids: sg-089ef210f43be6af0
+  subnet_id: subnet-0659fd6199f0d853c
+  associate_public_ip: true
+  instance_type: t2.micro
+  tags:
+    # Replace YOURNAME and YOURCOMPANY here
+    Name: "Chef tbagio Training Node for <YOURNAME>"
+    user: Administrator
+    X-Contact: "Tio Bagio"
+    X-Application: "apac"
+    X-Dept: "sales"
+    X-Customer: "apjcorp"
+    X-Project: "EMEA-Demo"
+    X-Termination-Date: "2018-07-20T12:04:30Z"
+    X-TTL: 4
+
+provisioner:
+  name: chef_zero
+
+verifier:
+  name: inspec
+  format: documentation
+
+platforms:
+  - name: centos-6
+    transport:
+      username: centos
+      ssh_key:  ~\.ssh\id_rsa
+    driver_config:
+      user_data: C:/Users/chef/user_data
+
+suites:
+  - name: default
+    run_list:
+      - recipe[webserver::default]
+    verifier:
+      inspec_tests:
+        - test/smoke/default
+    attributes:
