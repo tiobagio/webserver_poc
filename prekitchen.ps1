@@ -16,21 +16,21 @@ $mysubnet = (Invoke-WebRequest -Uri http://169.254.169.254/latest/meta-data/netw
 
 Write-Host "writing to .kitchen.local.yml with security group $mysg on subnet $mysubnet"
 
-$entries = '
+$entries = "
 ---
 driver:
     security_group_ids: $mysg
     subnet_id: $mysubnet
     tags:
     # Replace YOURNAME and YOURCOMPANY here
-        Name: "Chef training node for <YOURNAME>"
+        Name: 'Chef training node for <YOURNAME>'
         user: Administrator
-        X-Contact: "Tio Bagio"
-        X-Application: "apac"
-        X-Dept: "sales"
-        X-Customer: "apjcorp"
-        X-Project: "Training"
-        X-Termination-Date: "2018-07-20T12:04:30Z"
+        X-Contact: 'Tio Bagio'
+        X-Application: 'apac'
+        X-Dept: 'sales'
+        X-Customer: 'apjcorp'
+        X-Project: 'Training'
+        X-Termination-Date: '2018-07-20T12:04:30Z'
         X-TTL: 48
-'
+"
 Set-Content -Path .\\.kitchen.local.yml $entries
