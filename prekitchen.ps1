@@ -16,7 +16,7 @@ $mysubnet = (Invoke-WebRequest -Uri http://169.254.169.254/latest/meta-data/netw
 
 Write-Host "writing to .kitchen.local.yml with security group $mysg on subnet $mysubnet"
 
-$entries = "
+$entries = '
 ---
 driver:
     security_group_ids: $mysg
@@ -32,5 +32,5 @@ driver:
         X-Project: "Training"
         X-Termination-Date: "2018-07-20T12:04:30Z"
         X-TTL: 48
-"
+'
 Set-Content -Path .\\.kitchen.local.yml $entries
